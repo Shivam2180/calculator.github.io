@@ -1,0 +1,200 @@
+<html>
+
+  <head>
+     
+	  <title> Calculator In HTML CSS and JAVASCRIPT  </title>
+      <style>
+	  *
+	  {
+	  font-family:Berlin Sans FB; 
+	  }
+	    body
+		{
+		justify-content: center;
+		align-items:center;
+		display: flex;
+		background: linear-gradient(grey, lightgrey, grey);
+		}
+		.outer
+		{
+		width: 400px;
+		height: 400px;
+		background: #403e41;
+		border-radius: 10px;
+	    box-shadow: 20px -20px 0px 0px grey;
+	   border: 20px solid #403e41;
+	   
+		}
+		.calc
+		{
+		width:400px;
+		height: 60px;
+		background: #939f88;
+		border: none;
+		text-align: right;
+		border-radius: 3px;
+		box-shadow: inset 1px 1px 3px 3px black;
+		color: black;
+		font-size: 40px;
+		
+		}
+		.tr
+		{
+		height: 30px;
+		}
+		.tr td
+		{
+		height: 30px;
+		//border: 2px solid red;
+		}
+		
+		.memory
+		{
+		width: 50px;
+		height: 30px;
+		height: 100%;
+		background:rgba(230,230,230);
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		border-radius: 2px;
+		cursor: pointer;
+		//border: 2px solid red;
+		//color: white;
+		//font-weight: bold;
+		margin-left: 6px;
+		border-bottom:4px solid white;
+		border-right:4px solid white;
+		box-shadow:-3px -3px 5px 2px black;
+		transform: rotateX(-10deg);
+		}
+		
+		.tr2 td
+		{
+		height: 55px;
+		}
+		
+		.number
+		{
+		width: 55px;
+		height: 55px;
+		background:#141414;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		border-radius: 2px;
+		cursor: pointer;
+		//border: 2px solid red;
+		color: white;
+		//font-weight: bold;
+		margin-left: 6px;
+		border-bottom:3px solid #1E1E1E;
+		border-right:3px solid #1E1E1E;
+		//border:3px solid #36353a;
+		box-shadow:-3px -3px 5px 2px black;
+		//transform: rotateX(-10deg);
+		font-size: 25px;
+		}
+		.number:active
+		{
+		background: red;
+		}
+		.memory:active
+		{
+		background: white;
+		}
+		table input
+		{
+		border-left: none;
+		border-top: none;
+		}
+		
+	  </style>
+  </head>
+  
+  <body>
+  
+         <div class="outer">
+		   <form class="form">
+		     <input type="text" class="calc" name="answer" readonly=""/>
+			 <br/><br/><br/>
+			 <table width="400px" >
+			  <tr class="tr">
+			    <td> <input class="memory"  type="button" value="M+" onclick="form.answer.value = '' "> </td>
+			    <td> <input class="memory"  type="button" value="M-" onclick="form.answer.value = ' ' "> </td>
+			    <td> <input class="memory" type="button"  value="MR" onclick="form.answer.value = ' ' "> </td>
+			    <td> <input class="memory" type="button"   value="MC" onclick="form.answer.value = ' ' "> </td>
+			    <td> <input class="memory" type="button"  value="GT" onclick="form.answer.value = ' ' "> </td>
+			    <td> <input class="memory" type="button"  value="OFF" onclick="form.answer.value = ' ' ">  </td>
+			  </tr>
+	           <tr height=" 10px" width=" 100%">  </tr>
+			   
+        	<tr class="tr2">
+			      <td> <input type="button" class="number" value="AC" onclick="form.answer.value =' ' " 
+				style="font-size: 18px;  width: 58px; height: 58px;background: #00ffff;border-right: 3px solid #00d1d1; color: black;border-bottom: 3px solid #00d1d1;">  </td>
+			    
+			    <td> <input class="number" type="button"  value="7" onclick="form.answer.value += '7' "></td>
+			    <td> <input class="number" type="button"  value="8" onclick="form.answer.value += '8' "></td>
+			    <td> <input class="number" type="button"  value="9" onclick="form.answer.value += '9' "> </td>
+			    <td> <input class="number" type="button"  value="%" onclick="form.answer.value += '%' ">  </td>
+			    <td> <input class="number" type="button"  value="&#x221A;" onclick="form.answer.value = Math.sqrt(form.answer.value) " >  </td>
+			  </tr>
+			  
+			   <tr height=" 5px" width=" 100%">  </tr>
+			  
+			  <tr class="tr2">
+			      <td rowspan="2"><input class="number" type="button"  value="CE" onclick="form.answer.value =(form.answer.value).slice(0,-1)" style="background: red;  height: 60px;  width: 58px; border-right: 3px solid #8B0000; border-bottom: 3px solid #8B0000; color: black;  margin-top: -8px; font-size: 20px;"></td>
+			    
+			    <td> <input class="number"  type="button" value="4" onclick="form.answer.value += '4' "></td>
+			    <td> <input class="number"  type="button" value="5" onclick="form.answer.value += '5' "></td>
+			    <td> <input class="number"  type="button" value="6" onclick="form.answer.value += '6' "> </td>
+			    <td> <input class="number"  type="button" value="X" onclick="form.answer.value += '*' "></td>
+			    <td> <input class="number"  type="button" value="/" onclick="form.answer.value += '/' ">  </td>
+			  </tr>
+			  
+			   <tr height=" 5px" width=" 100%">  </tr>
+			  
+			  <tr class="tr2">
+			      <td rowspan="2"> <input class="number" type="button"  value="C" onclick="form.answer.value = ' ' " style="background: red;  height: 60px; width: 58px; border-right: 3px solid #8B0000; border-bottom: 3px solid #8B0000; color: black; margin-top: -8px; font-size: 20px; "></td>
+			    
+			    <td> <input type="button" value="1" class="number" onclick ="form.answer.value += '1' "> </td>
+			    <td> <input type="button" class="number" value="2"onclick="form.answer.value += '2' "> </td>
+			    <td> <input type="button"class="number" value="3" onclick="form.answer.value += '3' ">  </td>
+			    <td rowspan="0"> <input type="button" class="number" value="+" onclick="form.answer.value += '+' " style="height: 120px;"> </td>
+			    <td> <input class="number" type="button"  value="-" onclick="form.answer.value += '-' "> </td>
+			  </tr>
+			  
+			   <tr height=" 5px" width=" 100%">  </tr>
+			  
+			  <tr class="tr2">
+			    <td colspan="2"> <input type="button" style="width: 125px;"class="number" value="00" onclick="form.answer.value += '00' "></td>
+			    <td> <input class="number"  type="button" value="0" onclick="form.answer.value += '0' "></td>
+			    <td> <input class="number"  type="button" value="." onclick="form.answer.value += '.' "></td>
+			    <td> <input class="number"  type="button" value="=" onclick="form.answer.value = eval(form.answer.value)"> </td>
+		      </tr>
+			 
+			 </table>
+		   </form>
+		 </div>
+  
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
